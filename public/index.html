@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashton's Word of the Day</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Welcome to Ashton's Word of the Day Page!</h1>
+    <p>Check back daily for a new word to expand
+        your vocabulary!</p>
+    <p>This page has been visited <span id='hits'></span> times.</p>
+    <p><a href="/word.html">View the Word of the Day.</a></p>
+</body>
+
+<script>
+    fetch('/hits')
+        .then(response => response.json())
+        .then(
+            data => {
+                document.getElementById('hits').textContent = data.hits;
+            })
+        .catch(error => console.log('Error: ', error));
+</script>
+
+</html>

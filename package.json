@@ -1,0 +1,15 @@
+{
+  "name": "index",
+  "version": "1.0.0",
+  "description": "My First Node Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashton Rumaldo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {}
+}
